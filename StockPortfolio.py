@@ -259,55 +259,6 @@ def addRegion():
 
 if __name__=='__main__':
     app.secret_key = os.urandom(12)
-    app.run(debug=True, port=5000)
-
-# print(data)
-# tickersymbl = tickersymbl.upper()
-# longCompanyName = get_symbol(tickersymbl)
-# print(data)
-
-# lastRefreshed = meta_data['3. Last Refreshed']
-# timeZone = meta_data['5. Time Zone']
-# dateTime = lastRefreshed + " " + timeZone
-
-# lastDataSet = data[todaysDate]
-# print(lastDataSet)
-
-# openingStockPrice = lastDataSet['1. open']
-#
-# currentStockPrice = lastDataSet['5. adjusted close']
-# print("adjusted close" + currentStockPrice)
-
-# stockDelta = float(currentStockPrice) - float(openingStockPrice)
-
-# print(dateTime)
-
-# print("{} ({})".format(longCompanyName, tickersymbl))
-
-# if stockDelta < 0:
-#     percentChange = stockDelta / float(openingStockPrice) * float(100)
-#     print("{} {} ({}%)".format(currentStockPrice, round(stockDelta, 2), round(percentChange, 2)))
-# else:
-#     percentChange = stockDelta / float(openingStockPrice) * float(100)
-#     print("{} +{} (+{}%)".format(currentStockPrice, round(stockDelta, 2), round(percentChange, 2)))
-
-# elif strategy == 'Growth Investing':
-        #     company_0 = growth_array[0]
-        #     company_1 = growth_array[1]
-        #     company_2 = growth_array[2]
-        # elif strategy == 'Growth Investing':
-        #     company_0 = index_array[0]
-        #     company_1 = index_array[1]
-        #     company_2 = index_array[2]
-        # elif strategy == 'Growth Investing':
-        #     company_0 = quality_array[0]
-        #     company_1 = quality_array[1]
-        #     company_2 = quality_array[2]
-        # elif strategy == 'Growth Investing':
-        #     company_0 = value_array[0]
-        #     company_1 = value_array[1]
-        #     company_2 = value_array[2]
-        # else :
-        #     company_0 = ""
-        #     company_1 = ""
-        #     company_2 = ""
+    app.run(host='0.0.0.0',debug=True, port=5000)
+    # to run on local machine, use the below app.run
+    #app.run(debug=True, port=5000)
